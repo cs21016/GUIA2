@@ -4,9 +4,17 @@
         <servlet-name>CalcuServlet</servlet-name>
         <servlet-class>servlet.CalcuServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ConvKel</servlet-name>
+        <servlet-class>servlet.ConvKel</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>CalcuServlet</servlet-name>
         <url-pattern>/CalcuServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ConvKel</servlet-name>
+        <url-pattern>/ConvKel</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
