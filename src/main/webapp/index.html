@@ -2,36 +2,75 @@
 <html>
     <head>
         <title>Guia_02 - CS21016</title>
+        <meta charset="UTF-8">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     </head>
     <style>
         html{
-        font-family:'Segoe UI', Tahoma, Verdana, sans-serif
-    }
-    body {
-        background: lightcoral;
-        background-attachment: fixed;
-    }
+            font-family:'Segoe UI', Tahoma, Verdana, sans-serif
+        }
+        body {
+            background: lightcoral;
+            background-attachment: fixed;
+        }
+        fieldset{
+            border: dotted 3px;
+            border-color: maroon;
+        }
+        legend{
+            border:solid;
+            border-color:black;
+            border-radius: 50px;
+            background-color: maroon;
+            padding:3px;
+        }
     </style>
     <body>
         <form method="get" action="CalcuServlet">
-            <h1>Calculadora Básica</h1>
-            <div>
-                <label>Primer número</label>
-                <input type="text" name="n1"/><br/>
-            </div>
-            <div>
-                <label>Segundo número</label>
-                <input type="text" name="n2"/><br/>
-            </div>
-            Operaciones: <br/>
-            <input type="radio" name="operacion" value="sum">Suma
-            <input type="radio" name="operacion" value="res">Resta
-            <input type="radio" name="operacion" value="mul">Multiplicacion
-            <input type="radio" name="operacion" value="div">Division<br/>
-            
-            <input type="submit" value="Calcular"/>
-            <input type="reset" value="Reset"/>
+            <h1>Guía #02 - PGR II - UES FMOCC</h1>
+            <h2>Nombre: Francisco José Contreras Sanabria</h2>
+            <h3>DUE: CS21016</h3>
+            <fieldset>
+                <legend style="color:white">Calculadora Básica</legend>
+                <ul>
+                    <div>
+                        <label>Primer número:</label>
+                        <input type="text" name="n1"/><br/>
+                    </div>
+                    <div>
+                        <label>Segundo número:</label>
+                        <input type="text" name="n2"/><br/>
+                    </div>
+                    Operaciones: <br/>
+                    <input type="radio" name="operacion" value="sum">Suma
+                    <input type="radio" name="operacion" value="res">Resta
+                    <input type="radio" name="operacion" value="mul">Multiplicacion
+                    <input type="radio" name="operacion" value="div">Division<br/>
+
+                    <input type="submit" value="Calcular"/>
+                    <input type="reset" value="Reset"/>
+                </ul>               
+            </fieldset><br/>
+        </form>
+        <form method="get" action="">
+            <fieldset>
+                <legend style="color:white">Convertidor de Grados Kelvin (K°)</legend>
+                <ul>
+                    <div>
+                        <label>Grados Kelvin (K°):</label>
+                        <input type="text" name="g1"/><br/>
+                    </div>
+                    <div>
+                        <label>Elija una opción:</label>
+                        <select name="operacion" id="operacion">
+                            <option value="degreeCelsius">K° a C°</option>
+                            <option value="degreeFahrenheit">K° a F°</option>
+                        </select>
+                    </div>
+                    <input type="submit" value="Calcular"/>
+                    <input type="reset" value="Reset"/>
+                </ul>
+            </fieldset>
         </form>
     </body>
 </html>

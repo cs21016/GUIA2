@@ -64,16 +64,14 @@ public class CalcuServlet extends HttpServlet {
         x=Integer.parseInt(request.getParameter("n1"));
         y=Integer.parseInt(request.getParameter("n2"));
         str=request.getParameter("operacion");
-        if(str.equals("add"))
+        if(str.equals("sum"))
             out.println("<h1>Suma: "+(x+y)+"</h1>");
-        else if(str.equals("sub"))
+        else if(str.equals("res"))
             out.println("<h1>Resta: "+(x-y)+"</h1>");
         else if(str.equals("mul"))
             out.println("<h1>Multiplicacion: "+(x*y)+"</h1>");
-        else if(str.equals("div"))
+        else 
             out.println("<h1>Division: "+(x/y)+"</h1>");
-        else
-            out.println("<h1>Residuo: "+(x%y)+"</h1>");
     }
 
     /**
