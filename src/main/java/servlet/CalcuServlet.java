@@ -55,8 +55,25 @@ public class CalcuServlet extends HttpServlet {
      */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
+            throws ServletException, IOException 
+    {
+        //processRequest(request, response);
+        PrintWriter out = response.getWriter();
+        int x, y;
+        String str="";
+        x=Integer.parseInt(request.getParameter("n1"));
+        y=Integer.parseInt(request.getParameter("n2"));
+        str=request.getParameter("operacion");
+        if(str.equals("add"))
+            out.println("<h1>Suma: "+(x+y)+"</h1>");
+        else if(str.equals("sub"))
+            out.println("<h1>Resta: "+(x-y)+"</h1>");
+        else if(str.equals("mul"))
+            out.println("<h1>Multiplicacion: "+(x*y)+"</h1>");
+        else if(str.equals("div"))
+            out.println("<h1>Division: "+(x/y)+"</h1>");
+        else
+            out.println("<h1>Residuo: "+(x%y)+"</h1>");
     }
 
     /**
