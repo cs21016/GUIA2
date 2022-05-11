@@ -1,10 +1,37 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Start Page</title>
+        <title>Guia_02 - CS21016</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     </head>
+    <style>
+        html{
+        font-family:'Segoe UI', Tahoma, Verdana, sans-serif
+    }
+    body {
+        background: lightcoral;
+        background-attachment: fixed;
+    }
+    </style>
     <body>
-        <h1>Hello World!</h1>
+        <form method="get" action="CalcuServlet">
+            <h1>Calculadora Básica</h1>
+            <div>
+                <label>Primer número</label>
+                <input type="text" name="n1"/><br/>
+            </div>
+            <div>
+                <label>Segundo número</label>
+                <input type="text" name="n2"/><br/>
+            </div>
+            Operaciones: <br/>
+            <input type="radio" name="operacion" value="sum">Suma
+            <input type="radio" name="operacion" value="res">Resta
+            <input type="radio" name="operacion" value="mul">Multiplicacion
+            <input type="radio" name="operacion" value="div">Division<br/>
+            
+            <input type="submit" value="Calcular"/>
+            <input type="reset" value="Reset"/>
+        </form>
     </body>
 </html>
